@@ -3,7 +3,7 @@
 ## Stel een Unity project op
 
 1. Start Unity Hub, maak een 3D-project en noem het Jumper.
-![CreatieProject](./images/CreatieProject.PNG)
+![CreatieProject](./images/CreatieProject.png)
 2. Voeg het ML-Agent pakket toe in uw package manager. Zorg ervoor dat het de nieuwste versie is om problemen te vermijden.
 ![MLAgentPackages](./images/MLAgentPackages.png)
 
