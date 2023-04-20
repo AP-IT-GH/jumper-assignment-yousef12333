@@ -3,9 +3,9 @@
 ## Stel een Unity project op
 
 1. Start Unity Hub, maak een 3D-project en noem het Jumper.
-![CreatieProject](/images/CreatieProject.PNG)
+![CreatieProject](./images/CreatieProject.PNG)
 2. Voeg het ML-Agent pakket toe in uw package manager. Zorg ervoor dat het de nieuwste versie is om problemen te vermijden.
-![MLAgentPackages](/images/MLAgentPackages.PNG)
+![MLAgentPackages](./images/MLAgentPackages.PNG)
 
 ## Stel je scene op
 
@@ -14,41 +14,41 @@ Zorg ervoor dat het een plane bevat dat zal fungeren als onze vloer, een kubus d
 ## Probeer de properties van de illustraties van de inspector voor je objecten na te bootsen, uiteraard is de material optioneel:
 ### De Floor opstellen
 
-![FloorProperties](/images/FloorProperties.PNG)
+![FloorProperties](./images/FloorProperties.PNG)
 
 
 ### Maak uw Agent
 
-![AgentProperties](/images/AgentProperties.PNG)
+![AgentProperties](./images/AgentProperties.PNG)
 
 
 ### Creëer je Obstacle
 
-![ObstacleProperties](/images/ObstacleProperties.PNG)
+![ObstacleProperties](./images/ObstacleProperties.PNG)
 
 ### Maak de Wall
 
 Hiervoor hebben we er twee voor nodig: Wall en Wall2
 #### Wall:
-![WallProperties](/images/WallProperties.PNG)
+![WallProperties](./images/WallProperties.PNG)
 
 #### Wall2:
-![Wall2Properties](/images/Wall2Properties.PNG)
+![Wall2Properties](./images/Wall2Properties.PNG)
 
 
 ### Stel je Bonus op
 
-![BonusProperties](/images/BonusProperties.PNG)
+![BonusProperties](./images/BonusProperties.PNG)
 
 ### Stel je ObstacleSpawner op
 
 
 Hiervoor hebben we er twee voor nodig: ObstacleSpawner en ObstacleSpawner2
 #### ObstacleSpawner:
-![ObstacleSpawnerProperties](/images/ObstacleSpawnerProperties.PNG)
+![ObstacleSpawnerProperties](./images/ObstacleSpawnerProperties.PNG)
 
 #### ObstacleSpawner2:
-![ObstacleSpawner2Properties](/images/ObstacleSpawner2Properties.PNG)
+![ObstacleSpawner2Properties](./images/ObstacleSpawner2Properties.PNG)
 
 Steek al deze objecten nadien in een empty object in de Hierarchy en noem het TrainingArea. Uiteraard kan je naar je eigen wil ook de positie en rotatie van je main camera aanpassen zodat het goed staat.
 
@@ -65,16 +65,16 @@ Als je het wilt, kun je net zoals ik je scene verfraaien met straatjes, een krui
 1. Rechtermuisknop > create > Folder. Noem het config.
 2. Open visual studio code en ga naar de config folder en maak een nieuwe file JumperAgent.yaml aan en vul de waardes in zoals in de illustratie hieronder.
 
-![ConfigProperties](/images/ConfigProperties.PNG)
+![ConfigProperties](./images/ConfigProperties.PNG)
 
 ## Scripts
 
 Om mijn applicatie te reproduceren, moet je 4 scripts hebben. Bonus, JumpingAgent, ObjectSpawner, Obstable. Hieronder vind je de code voor elke script:
 
-![BonusCode](/images/BonusCode.PNG)
-![JumpingAgentCode](/images/JumpingAgentCode.PNG)
-![ObjectSpawnerCode](/images/ObjectSpawnerCode.PNG)
-![ObstableCode](/images/ObstableCode.PNG)
+![BonusCode](./images/BonusCode.PNG)
+![JumpingAgentCode](./images/JumpingAgentCode.PNG)
+![ObjectSpawnerCode](./images/ObjectSpawnerCode.PNG)
+![ObstableCode](./images/ObstableCode.PNG)
 
 Als het correct gelukt is om alles over te kopieren zou het geen errors moeten geven.
 
@@ -100,4 +100,4 @@ Uiteraard mag je de naam van je run-id zelf verzinnen.
 
 Hieronder vind je een illustratie van de cumulatieve beloningen weer voor het trainen van mijn Agent. Normaal gezien zou je met deze vergelijkbare hoeveelheid steps, hetzelfde resultaat moeten bekomen.
 
-![TensorboardResult](/images/TensorboardResult.PNG)
+![TensorboardResult](./images/TensorboardResult.PNG)

@@ -66,14 +66,14 @@ public class JumpingAgent : Agent
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            AddReward(-0.3f); //probeer eens naar -0.6f te zetten later. Ik krijg een toename grafiek, maar het blijft een beetje te lang op de grond liggen. In het begin wal het wel juist.
+            AddReward(-1.05f); 
             EndEpisode();
         }
     }
 
     public void JumpedReward()
     {
-        AddReward(0.2f);
+        AddReward(0.4f);
         timeSinceLastObstacle = 0f;
     }
 }

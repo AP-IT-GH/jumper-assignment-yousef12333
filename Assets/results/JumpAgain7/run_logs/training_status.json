@@ -1,0 +1,47 @@
+{
+    "JumperAgent": {
+        "checkpoints": [
+            {
+                "steps": 499944,
+                "file_path": "results\\JumpAgain7\\JumperAgent\\JumperAgent-499944.onnx",
+                "reward": -0.02686562188970509,
+                "creation_time": 1681935145.5242517,
+                "auxillary_file_paths": [
+                    "results\\JumpAgain7\\JumperAgent\\JumperAgent-499944.pt"
+                ]
+            },
+            {
+                "steps": 999990,
+                "file_path": "results\\JumpAgain7\\JumperAgent\\JumperAgent-999990.onnx",
+                "reward": -0.11944439241455661,
+                "creation_time": 1681941413.9662778,
+                "auxillary_file_paths": [
+                    "results\\JumpAgain7\\JumperAgent\\JumperAgent-999990.pt"
+                ]
+            },
+            {
+                "steps": 1000047,
+                "file_path": "results\\JumpAgain7\\JumperAgent\\JumperAgent-1000047.onnx",
+                "reward": -0.08513508515583502,
+                "creation_time": 1681941414.0494945,
+                "auxillary_file_paths": [
+                    "results\\JumpAgain7\\JumperAgent\\JumperAgent-1000047.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000047,
+            "file_path": "results\\JumpAgain7\\JumperAgent.onnx",
+            "reward": -0.08513508515583502,
+            "creation_time": 1681941414.0494945,
+            "auxillary_file_paths": [
+                "results\\JumpAgain7\\JumperAgent\\JumperAgent-1000047.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
