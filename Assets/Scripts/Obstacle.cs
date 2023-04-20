@@ -10,8 +10,8 @@ public class Obstacle : MonoBehaviour
 
     private void Start()
     {
-        speed = Random.Range(minSpeed, maxSpeed);
-        jumpingAgent = GameObject.FindObjectOfType(typeof(JumpingAgent)) as JumpingAgent;
+        speed = Random.Range(minSpeed, maxSpeed); //bepaalt randomly hoe snel het gaat
+        jumpingAgent = GameObject.FindObjectOfType(typeof(JumpingAgent)) as JumpingAgent; //object referentie van jumpingAgent om reward te geven
 
 
     }
@@ -22,17 +22,17 @@ public class Obstacle : MonoBehaviour
     }
     private void Move()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime); //beweging obstacle
     }
 
     public void SetDirection(Vector3 direction)
     {
-        this.direction = direction;
+        this.direction = direction; //naar welke richting hij moet gaan aangezien hij zowel kan instantiëren aan de linkerzijde als de rechterzijde
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall")) //bij botsing met de muur betekent dat dat de Agent de obstacle ontweken heeft en wordt in JumpingAgent daarvoor beloond
         {
             AddJumpReward();
             Destroy(gameObject);

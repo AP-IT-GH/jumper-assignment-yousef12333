@@ -27,18 +27,18 @@ public class JumpingAgent : Agent
         {
             isOnGround = false;
             rBody.AddForce(Vector3.up * 10, ForceMode.VelocityChange);
-            AddReward(-reward);
+            AddReward(-reward); //zomaar springen wordt bestraft
         }
 
         timeSinceLastObstacle += Time.deltaTime;
-        if (timeSinceLastObstacle > maxTimeWithoutObstacle)
+        if (timeSinceLastObstacle > maxTimeWithoutObstacle) //checkt elke drie seconden of het een collisie deed met de obstacle, zo niet dan wordt hij beloond en zal timesincelastobstacle weer 0f worden
         {
             AddReward(0.1f);
             timeSinceLastObstacle = 0f;
         }
     }
 
-    public override void Heuristic(in ActionBuffers actionsOut)
+    public override void Heuristic(in ActionBuffers actionsOut) //heuristic voor als ik het zelf wil laten springen, handig voor testing interne functie componenten, maar niet voor tijdens training
     {
         var discreteActionsOut = actionsOut.DiscreteActions;
         discreteActionsOut[0] = Input.GetKey(KeyCode.Space) ? 1 : 0;
@@ -57,7 +57,7 @@ public class JumpingAgent : Agent
         }
         else if (other.gameObject.CompareTag("Bonus"))
         {
-            AddReward(0.5f);
+            AddReward(0.5f); //bonus geeft reward
             Destroy(other.gameObject);
         }
     }
@@ -66,12 +66,12 @@ public class JumpingAgent : Agent
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            AddReward(-1.05f); 
+            AddReward(-1.05f); //botsing met obstacle geeft punishment (negatieve reward)
             EndEpisode();
         }
     }
 
-    public void JumpedReward()
+    public void JumpedReward() //beloning voor ontwijken obstacle
     {
         AddReward(0.4f);
         timeSinceLastObstacle = 0f;

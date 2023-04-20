@@ -9,7 +9,7 @@ public class Bonus : MonoBehaviour
 
     private void Start()
     {
-        speed = Random.Range(minSpeed, maxSpeed);
+        speed = Random.Range(minSpeed, maxSpeed);//bepaal de variërende snelheid van het object
     }
 
     private void Update()
@@ -17,7 +17,7 @@ public class Bonus : MonoBehaviour
         Move();
     }
 
-    private void Move()
+    private void Move() //deze methode beweegt het object (in de in inspector gegeven richting van een andere script)
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
