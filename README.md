@@ -81,7 +81,6 @@ Als het correct gelukt is om alles over te kopieren zou het geen errors moeten g
 ## Hoe je je agent traint
 
 ### Installatie
-![ObstacleCode](./images/ObstacleCode.png)   
 Om je je agent te trainen is het vereist dat je anaconda (prompt) hebt geinstalleerd. De instructie kun je volgen op anaconda.com.
 1. Open Anaconda prompt en run: (enkel voor Windows) installatie PyTorch: pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
 2. Installatie ML Agents: python -m pip install mlagents==0.28.0
